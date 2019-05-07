@@ -32,6 +32,9 @@ public class LabStaff {
 	private String staffMobile;
 	
 	@NotNull
+	private String password;
+	
+	@NotNull
 	private int staffRoleId;
 	
 	@NotNull
@@ -93,13 +96,21 @@ public class LabStaff {
 		this.isUsed = isUsed;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	@Override
 	public String toString() {
 		return "LabStaff [staffId=" + staffId + ", labId=" + labId + ", branchId=" + branchId + ", staffName="
-				+ staffName + ", staffMobile=" + staffMobile + ", staffRoleId=" + staffRoleId + ", isUsed=" + isUsed
-				+ "]";
+				+ staffName + ", staffMobile=" + staffMobile + ", password=" + password + ", staffRoleId=" + staffRoleId
+				+ ", isUsed=" + isUsed + "]";
 	}
-	
-	
 
+	 
+	
 }
