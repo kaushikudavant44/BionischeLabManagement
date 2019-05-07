@@ -20,7 +20,7 @@ public interface TestRepository extends JpaRepository<Test, Integer>{
 	@Query("UPDATE Test  SET isUsed =:isUsed WHERE testId=:testId")
 	int updateTestIsUsedStatus(@Param("testId")int testId,@Param("isUsed")int isUsed);
 
-	@Query(value=" SELECT t.* from m_test t, m_lab_available_test_header, th where th.branch_id=:branchId AND t.test_id=th.test_id AND th.is_used=1 AND t.is_used=1 ",nativeQuery=true)
-	List<Test> getAvailableTestByBranchId(int branchId);
+	@Query(value=" SELECT t.* from m_test t, m_lab_available_test_header th where th.branch_id=:branchId AND t.test_id=th.test_id AND th.is_used=1 AND t.is_used=1 ",nativeQuery=true)
+	List<Test> getAvailableTestByBranchId(@Param("branchId")int branchId);
 	 
 }

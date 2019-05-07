@@ -5,6 +5,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.bionische.lms.test.model.Test;
 import com.bionische.lms.test.model.TestDetails;
@@ -13,7 +14,7 @@ import com.bionische.lms.test.repository.TestDetailsRepository;
 import com.bionische.lms.test.repository.TestFactorsRepository;
 import com.bionische.lms.test.repository.TestRepository;
 import com.bionische.lms.util.Info;
-
+@Service
 public class MasterServiceImpl implements MasterService{
 
 	Logger logger = LoggerFactory.getLogger(MasterServiceImpl.class);
