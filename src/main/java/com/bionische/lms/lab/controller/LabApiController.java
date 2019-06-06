@@ -196,4 +196,13 @@ public class LabApiController {
 			return new ResponseEntity<List<Test>>(testList, HttpStatus.OK);
 		}
 	}
+	 
+ 
+	
+	@PostMapping("/updateAvailableTestIsUsedStatusByBranchIdAndTestId")
+	public Info updateAvailableTestIsUsedStatusByBranchIdAndTestId( @RequestParam("branchId")int branchId,@RequestParam("testId")int testId,@RequestParam("isUsed")int isUsed) {
+		return labService.updateAvailableTestIsUsedStatusByBranchIdAndTestId(branchId,testId,isUsed);
+	}
+	
+	
 }

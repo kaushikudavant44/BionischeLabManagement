@@ -20,5 +20,5 @@ public interface ItemRepository extends JpaRepository<Item, Integer>{
 	int updateItemIsUsedStatus(@Param("itemId")int itemId,@Param("isUsed")int isUsed);
 
 	List<Item> findByBranchIdAndIsUsed(int branchId, int isUsed);
-	 
+ 
 }

@@ -318,5 +318,24 @@ catch (Exception e) {
 		return testRepository.getAvailableTestByBranchId(branchId);
 	}
 
+	@Override
+	public Info updateAvailableTestIsUsedStatusByBranchIdAndTestId(int branchId, int testId, int isUsed) {
+		
+		Info info=new Info();
+		info.setError(true);
+		int res=labAvailableTestHeaderRepository.updateAvailableTestIsUsedStatusByBranchIdAndTestId(branchId,testId, isUsed);
+		if(res>0)
+		{
+			info.setError(false);
+			info.setMessage("Lab update Available test isUsed Status");
+		}
+		else {
+			info.setError(true);
+			info.setMessage("Failed to update Available test isUsed Status");
+		}
+		return info;
+	}
+ 
+
 	 
 }

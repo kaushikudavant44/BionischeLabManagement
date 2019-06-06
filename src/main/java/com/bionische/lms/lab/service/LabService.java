@@ -60,4 +60,6 @@ public interface LabService {
 	public Info addLabAvailableTest(   List<LabAvailableTestHeader> labAvailableTestHeaderList);
 
 	public List<Test> getAvailableTestByBranchId(int branchId);
+
+	public Info updateAvailableTestIsUsedStatusByBranchIdAndTestId(int branchId, int testId, int isUsed);
 }

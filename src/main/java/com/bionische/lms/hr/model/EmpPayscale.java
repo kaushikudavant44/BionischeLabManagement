@@ -8,8 +8,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="m_payscale")
-public class PayScale {
+@Table(name="t_emp_payscale")
+public class EmpPayscale {
 
 		
  
@@ -17,7 +17,7 @@ public class PayScale {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int payscale_id;
 	@NotNull
-	private int jobId;
+	private int empId;
 	@NotNull
 	private float gradeBasic;
 	@NotNull
@@ -36,7 +36,8 @@ public class PayScale {
 	private float graduity;
 	@NotNull
 	private float mediclaim;
- 
+	@NotNull
+	private float gradePerHour;
 	@NotNull
 	private float gradeGrossSalary;
 	@NotNull
@@ -51,12 +52,7 @@ public class PayScale {
 	public void setPayscale_id(int payscale_id) {
 		this.payscale_id = payscale_id;
 	}
-	public int getJobId() {
-		return jobId;
-	}
-	public void setJobId(int jobId) {
-		this.jobId = jobId;
-	}
+	 
 	public float getGradeBasic() {
 		return gradeBasic;
 	}
@@ -111,7 +107,12 @@ public class PayScale {
 	public void setMediclaim(float mediclaim) {
 		this.mediclaim = mediclaim;
 	}
-	 
+	public float getGradePerHour() {
+		return gradePerHour;
+	}
+	public void setGradePerHour(float gradePerHour) {
+		this.gradePerHour = gradePerHour;
+	}
 	public float getGradeGrossSalary() {
 		return gradeGrossSalary;
 	}
@@ -130,13 +131,19 @@ public class PayScale {
 	public void setIsUsed(int isUsed) {
 		this.isUsed = isUsed;
 	}
+	public int getEmpId() {
+		return empId;
+	}
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
 	@Override
 	public String toString() {
-		return "PayScale [payscale_id=" + payscale_id + ", jobId=" + jobId + ", gradeBasic=" + gradeBasic + ", gradeTa="
-				+ gradeTa + ", gradeHra=" + gradeHra + ", gradeBonus=" + gradeBonus + ", gradeOther=" + gradeOther
-				+ ", gradePf=" + gradePf + ", gradePt=" + gradePt + ", graduity=" + graduity + ", mediclaim="
-				+ mediclaim + ", gradeGrossSalary=" + gradeGrossSalary + ", gradeNetSalary=" + gradeNetSalary
-				+ ", isUsed=" + isUsed + "]";
+		return "EmpPayscale [payscale_id=" + payscale_id + ", empId=" + empId + ", gradeBasic=" + gradeBasic
+				+ ", gradeTa=" + gradeTa + ", gradeHra=" + gradeHra + ", gradeBonus=" + gradeBonus + ", gradeOther="
+				+ gradeOther + ", gradePf=" + gradePf + ", gradePt=" + gradePt + ", graduity=" + graduity
+				+ ", mediclaim=" + mediclaim + ", gradePerHour=" + gradePerHour + ", gradeGrossSalary="
+				+ gradeGrossSalary + ", gradeNetSalary=" + gradeNetSalary + ", isUsed=" + isUsed + "]";
 	}
  
 
