@@ -63,9 +63,8 @@
 						alt="IMG">
 				</div>
 
-				<div>
-					<form class="login100-form validate-form"action="${pageContext.request.contextPath}/loginProess"
-					method="post">
+				<div  ng-controller="loginController" ng-submit="submitLoginForm()">
+					<form class="login100-form validate-form">
 						<span class="login100-form-title"> Lab Login </span>
 
 						<div class="wrap-input100 validate-input"
@@ -85,6 +84,10 @@
 								<i class="fa fa-lock" aria-hidden="true"></i>
 							</span>
 						</div>
+
+
+
+
 
 						<div class="container-login100-form-btn">
 							<button class="login100-form-btn" type="submit">Login</button>
@@ -130,6 +133,8 @@
 	<script src="//code.angularjs.org/1.6.0/angular-cookies.min.js"></script>
 
 
+
+<script src="${pageContext.request.contextPath}/resources/ng/login.js"></script>
 
 
 </body>
