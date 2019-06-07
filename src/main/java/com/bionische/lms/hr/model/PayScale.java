@@ -14,7 +14,7 @@ public class PayScale {
 		
  
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int payscale_id;
 	@NotNull
 	private int jobId;

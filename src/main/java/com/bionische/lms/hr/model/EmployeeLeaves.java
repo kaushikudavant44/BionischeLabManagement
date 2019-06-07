@@ -17,7 +17,7 @@ public class EmployeeLeaves {
 
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id",length=11)
 	private int id;
 	

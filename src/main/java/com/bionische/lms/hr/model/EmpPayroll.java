@@ -16,7 +16,7 @@ public class EmpPayroll {
 
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int payroll_id;
 	@NotNull
 	private int month;

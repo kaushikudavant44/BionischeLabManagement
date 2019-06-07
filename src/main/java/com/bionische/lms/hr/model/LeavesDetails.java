@@ -15,7 +15,7 @@ public class LeavesDetails {
 
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="leave_id",length=11)
 	private int leaveId;
 	

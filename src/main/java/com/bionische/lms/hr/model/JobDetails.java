@@ -14,7 +14,7 @@ public class JobDetails {
 
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="job_id",length=11)
 	private int jobId;
 	
