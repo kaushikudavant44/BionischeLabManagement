@@ -1,10 +1,13 @@
 package com.bionische.lms.hr.contoller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -42,10 +45,25 @@ public class HrApiController {
 		return hrMasterService.addJobDetails(jobDetails);
 	}
 	
+	@GetMapping("/getJobDetails")
+	public List<JobDetails> getJobDetails() {
+		return hrMasterService.getAllJobDetails();
+	}
+	
+	
 	@PostMapping("/addDepartmentDetails")
 	public DepartmentDetails addDepartmentDetails(@Valid @RequestBody DepartmentDetails departmentDetails) {
 		return hrMasterService.addDepartmentDetails(departmentDetails);
 	}
+	
+	
+	
+	@GetMapping("/getDeptDetails")
+	public List<DepartmentDetails> getDeptDetails() {
+		return hrMasterService.getDeptDetails();
+	}
+	
+	
 	
 	@PostMapping("/addEmployeeLeaves")
 	public EmployeeLeaves addEmployeeLeaves(@Valid @RequestBody EmployeeLeaves employeeLeaves) {

@@ -1,5 +1,7 @@
 package com.bionische.lms.hr.service;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import com.bionische.lms.hr.model.DepartmentDetails;
@@ -28,6 +30,10 @@ public interface HrMasterService {
 	EmpPayscale addEmpPayscale(EmpPayscale empPayscale);
 
 	EmpPayroll addEmpPayroll( EmpPayroll empPayroll);
+
+	List<JobDetails> getAllJobDetails();
+
+	List<DepartmentDetails> getDeptDetails();
 
 	
 }

@@ -1,5 +1,7 @@
 package com.bionische.lms.hr.service;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -96,6 +98,20 @@ public class HrMasterServiceImpl implements HrMasterService{
 	public EmpPayroll addEmpPayroll(EmpPayroll empPayroll) {
 	 
 		return empPayrollRepository.save(empPayroll);
+	}
+
+
+	@Override
+	public List<JobDetails> getAllJobDetails() {
+		 
+		return jobDetailsRepository.findAll();
+	}
+
+
+	@Override
+	public List<DepartmentDetails> getDeptDetails() {
+		 
+		return departmentDetailsRepository.findAll();
 	}
 
 	
